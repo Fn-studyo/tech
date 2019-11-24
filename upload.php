@@ -17,7 +17,7 @@ $db = "upload";
 
 
 // Create connection
-$conn = new mysqli($server, $usern, $pass, $db);
+$conn = new mysqli($server, $user, $pass, $db);
 
 // Check connection
 if ($conn->connect_error) {
@@ -38,8 +38,8 @@ if(isset($_POST['upload']) && $_POST['upload'] == 'Upload'){
 	$fileName = $_FILES['file']['name'];
 	$fileSize = $_FILES['file']['size'];
 	$fileType = $_FILES['file']['type'];
-  $fileNameCmps = explode(".", $fileName); //spiliting strings
-  $fileExtension = strtolower(end($fileNameCmps));
+        $fileNameCmps = explode(".", $fileName); //spiliting strings
+        $fileExtension = strtolower(end($fileNameCmps));
 	
 	
 	
@@ -52,7 +52,7 @@ if(isset($_POST['upload']) && $_POST['upload'] == 'Upload'){
     $allowedfileExtensions = array('jpg', 'gif', 'png', 'txt', 'xls', 'doc', 'pptx');
 		
 		
-		  if (in_array($fileExtension, $allowedfileExtensions))
+if (in_array($fileExtension, $allowedfileExtensions))
 
     {
 
