@@ -74,7 +74,7 @@ if (in_array($fileExtension, $allowedfileExtensions))
 				
 				$newfile = mysqli_real_escape_string($conn, $fileName);
 				
-				$sql = "INSERT INTO uploads (file) VALUES ('$newfile');
+				$sql = "INSERT INTO uploads (file) VALUES ('$newfile');"
 				
 				$result = mysqli_query($conn, $sql);
 				
